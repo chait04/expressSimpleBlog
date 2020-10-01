@@ -3,16 +3,15 @@
  */
 
 // Module initializations
-var express = require('express')
-    , http = require('http')
-    , path = require('path')
-    , mongoose = require('mongoose')
-    , mongoStore = require('connect-mongo')(express)
-    , config = require('config')
-    , utils = require('./lib/utils')
-    , ENV = process.env.NODE_ENV || 'development';
-
-var app = express();
+const  express = require('express') 
+const  http = require('http')
+const  path = require('path')
+const  mongoose = require('mongoose')
+const  mongoStore = require('connect-mongo')(express)
+const  config = require('config')
+const  utils = require('./lib/utils')
+const  ENV = process.env.NODE_ENV || 'development';
+const  app = express();
 
 //connection url for future use
 mongoose = utils.connectToDatabase(mongoose, config.db);
